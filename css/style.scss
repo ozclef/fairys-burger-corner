@@ -1,0 +1,104 @@
+$primary: #2c2c2c;
+$accent: #c59d5f;
+$light: #f5f5f5;
+$transition: 0.3s ease;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: $light;
+    color: $primary;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: $accent;
+    }
+
+    .nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+            color: $primary;
+            transition: $transition;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #fff, #f8f3eb);
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 12px 30px;
+        background: $accent;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            background: darken($accent, 10%);
+        }
+    }
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.aside {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.main {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: $primary;
+    color: white;
+    margin-top: 40px;
+}
